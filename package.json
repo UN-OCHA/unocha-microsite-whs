@@ -1,0 +1,24 @@
+{
+  "name": "unocha-microsite-whs",
+  "version": "1.0.0",
+  "description": "World Humanitarian Summit microsite",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UN-OCHA/unocha-microsite-whs.git"
+  },
+  "author": "UNOCHA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UN-OCHA/unocha-microsite-whs/issues"
+  },
+  "homepage": "https://github.com/UN-OCHA/unocha-microsite-whs#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-githooks": "^0.6.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-sass-import": "^0.2.2"
+  }
+}
