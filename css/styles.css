@@ -110,9 +110,12 @@ body {
   font-family: helvetica, arial, sans-serif;
   font-size: 16px;
   font-size: 1rem;
-  color: #000;
+  color: #686868;
   line-height: 1.5;
   background: white; }
+
+h1, h2, h3, h4, h5 {
+  line-height: 1.2; }
 
 .container {
   margin-left: auto;
@@ -836,3 +839,98 @@ body {
     margin-left: 83.3333333333%; }
   .offset-xxl-11 {
     margin-left: 91.6666666667%; } }
+
+.site-header {
+  background: #3F3F3F;
+  color: #FFF;
+  text-align: center;
+  padding: 8px 0 16px 0; }
+
+.site-header__inner {
+  position: relative;
+  padding-top: 48px; }
+
+.site-header__logo {
+  width: 96px;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.site-header__heading {
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: bold; }
+
+.site-header__sub-heading {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: bold; }
+
+@media (min-width: 576px) {
+  .site-header {
+    padding: 16px 0; }
+  .site-header__logo {
+    width: 120px; } }
+
+@media (min-width: 768px) {
+  .site-header {
+    padding: 24px 0 32px 0; }
+  .site-header__inner {
+    padding-top: 56px; }
+  .site-header__heading {
+    font-size: 40px;
+    font-size: 2.5rem;
+    margin-bottom: 8px; }
+  .site-header__sub-heading {
+    font-size: 16px;
+    font-size: 1rem; } }
+
+@media (min-width: 1025px) {
+  .site-header__inner {
+    padding-top: 80px; }
+  .site-header__logo {
+    width: 160px; }
+  .site-header__sub-heading {
+    font-size: 24px;
+    font-size: 1.5rem; } }
+
+.main-content {
+  text-align: center; }
+  .main-content h2 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 24px; }
+  .main-content p {
+    margin-bottom: 24px; }
+
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 1; }
+
+.nav__link {
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-left: 12px; }
+  .nav__link:hover, .nav__link:focus {
+    color: #11c3ff; }
+
+@media (min-width: 768px) {
+  .nav__link {
+    font-size: 16px;
+    font-size: 1rem; } }
+
+.skip-link {
+  position: absolute;
+  left: -99999px;
+  color: #FFF; }
+  .skip-link:focus {
+    left: 0;
+    top: 0; }

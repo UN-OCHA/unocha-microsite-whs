@@ -1,0 +1,27 @@
+.nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+	line-height: 1;	
+}
+
+.nav__link {
+	color: $light-text-color;
+	text-decoration: none;
+	text-transform: uppercase;
+	@include font-size($small-font-size);
+	font-weight: bold;
+	margin-left: $base-unit*1.5;
+
+	&:hover, &:focus {
+		color: $header-highlight-text;
+	}
+}
+
+@include media-query(md) {
+
+	.nav__link {
+		@include font-size($base-font-size);
+	}
+
+}
