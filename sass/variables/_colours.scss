@@ -1,14 +1,19 @@
 $body-text-color: #686868;
-$heading-text-color: #000;
+$heading-text-color: #333;
 $light-text-color: #FFF;
 
 $header-highlight-text: #11c3ff; // only use on dark
 
 $dark-grey: #3F3F3F;
-$blue: #00B2EF; //009cd0 - pass for large
-$green: #52AD32;
-$purple: #AE67AB;
-$orange: #FFA113;
-$red: #E54E0F;
+$blue:  #006e93; //#00B2EF;
+$green: #3c7d24; //#52AD32;
+$purple: #9e559b; //#AE67AB;
+$orange: #985b00; //#FFA113;
+$red: #c8450d; //#E54E0F;
 
 $light-grey: #C1C1C1;
+$grey-bg: #939393;
+$dark-grey-bg: #19262F;
+
+$light-border: $light-grey;
+$dark-border: $heading-text-color;

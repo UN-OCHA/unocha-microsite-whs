@@ -1,0 +1,34 @@
+.btn-primary {
+	display: inline-block;
+	color: $blue;
+	background: none;
+	-webkit-appearance: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: 2px solid $blue;
+	text-decoration: none;
+	padding: $base-unit*1.5 $base-unit*2;
+
+	&:hover, &:focus {
+		color: $light-text-color;
+		background: $blue;
+	}
+}
+
+.btn-small {
+	@include font-size($small-font-size);
+	padding: $base-unit*0.5 $base-unit*1;
+	border-width: 1px;
+}
+
+@include media-query(md) {
+
+	.btn-primary {
+		@include font-size($medium-font-size);
+	}
+
+	.btn-small {
+		@include font-size($small-font-size);
+	}
+
+}

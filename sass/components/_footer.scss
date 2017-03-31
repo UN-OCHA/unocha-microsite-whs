@@ -1,0 +1,33 @@
+.footer {
+	background: $dark-grey-bg;
+	color: $light-text-color;
+	padding-top: $base-unit*3;
+	padding-bottom: $base-unit*3;
+
+	h2 {
+		font-weight: bold;
+		color: $light-text-color;
+		margin-bottom: $base-unit;
+	}
+
+	p {
+		@include font-size($small-font-size);
+	}
+
+	a {
+		color: $light-text-color;
+	}
+}
+
+@include media-query (md) {
+
+	.footer {
+		padding-top: $base-unit*5;
+		padding-bottom: $base-unit*5;
+
+		h2 {
+			margin-bottom: $base-unit*2;
+		}
+	}
+
+}

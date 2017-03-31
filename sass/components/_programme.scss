@@ -1,0 +1,105 @@
+.programme__item {
+	background: $grey-bg;
+	margin: 0 0 $base-unit 0;
+	position: relative;
+
+	&.active {
+		.programme__heading {
+			opacity: 0;
+		}
+
+		.programme__content {
+			opacity: 1;
+			z-index: 1;
+		}
+	}
+}
+
+.programme__heading, .programme__content  {
+	display: block;
+	transition: opacity 0.3s ease;
+}
+
+.programme__heading {
+	padding: $base-unit*2;
+	cursor: pointer;
+  width: 100%;
+  text-transform: uppercase;
+  @include font-size($medium-font-size)
+  font-weight: bold;
+  line-height: 1.2;
+  color: $light-text-color;
+  background: none;
+  border: none;
+  -webkit-appearance: none;
+
+  .js & {
+  	position: absolute;
+		top: 0;
+		left: 0;
+	  width: 100%;
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+  }
+}
+
+.programme__content {
+	background: $blue;
+	padding: $base-unit*1.5;
+	color: $light-text-color;
+	@include font-size($small-font-size)
+	height: 100%;	
+	position: relative;
+	min-height: $base-unit*8;
+
+	.js & {
+		z-index: -1;
+		opacity: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	p {
+		margin-bottom: $base-unit/2;
+	}
+
+	// Prevent focus on links while content is hidden
+	a {
+		visibility: hidden;
+		color: $light-text-color;
+
+		.active & {
+			visibility: visible;
+		}
+	}
+}
+
+
+@include media-query(sm) {
+
+	.programme {
+		.js & {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	.programme__item {
+		width: 48%;
+		margin: $base-unit 1%;
+	}
+
+}
+
+@include media-query(lg) {
+
+	.programme__item {
+		width: 23%;
+	}
+
+}
+

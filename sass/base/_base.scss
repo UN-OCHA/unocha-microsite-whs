@@ -24,8 +24,19 @@ body {
   color: $body-text-color;
   line-height: 1.5;
   background: white;
+  text-align: center;
 }
 
 h1, h2 ,h3 ,h4 ,h5 {
   line-height: 1.2;
+}
+
+h2 ,h3 ,h4 ,h5 {
+  color: $heading-text-color;
+}
+
+h2.highlight-heading {
+  color: $blue;
+  text-transform: uppercase;
+  font-weight: bold;
 }
