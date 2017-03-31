@@ -13,7 +13,7 @@
 	font-weight: bold;
 	margin-left: $base-unit*1.5;
 
-	&:hover, &:focus {
+	&:hover, &:focus, &.nav__link--active {
 		color: $header-highlight-text;
 	}
 }
