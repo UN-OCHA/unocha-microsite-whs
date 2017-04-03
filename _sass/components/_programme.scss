@@ -25,7 +25,7 @@
 	cursor: pointer;
   width: 100%;
   text-transform: uppercase;
-  @include font-size($medium-font-size)
+  @include font-size($medium-font-size);
   font-weight: bold;
   line-height: 1.2;
   color: $light-text-color;
@@ -49,7 +49,7 @@
 	background: $blue;
 	padding: $base-unit*1.5;
 	color: $light-text-color;
-	@include font-size($small-font-size)
+	@include font-size($small-font-size);
 	height: 100%;	
 	position: relative;
 	min-height: $base-unit*8;
