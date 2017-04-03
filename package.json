@@ -19,6 +19,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-githooks": "^0.6.0",
     "grunt-sass": "^2.0.0",
-    "grunt-sass-import": "^0.2.2"
+    "grunt-sass-import": "^0.2.2",
+    "grunt-svgmin": "^4.0.0"
   }
 }

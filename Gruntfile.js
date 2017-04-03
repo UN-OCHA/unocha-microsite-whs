@@ -46,6 +46,23 @@ module.exports = function(grunt) {
           dest: 'css'
         }]
       }
+    },
+    svgmin: {
+      options: {
+        plugins: [
+          {
+            removeViewBox: false
+          },
+          {
+            cleanupIDs: false
+          }
+        ]
+      },
+      dist: {
+        files: {
+          'icons/symbol-defs.svg' : 'icons/symbol-defs.svg'
+        }
+      }
     }
   });
 
@@ -54,6 +71,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-svgmin');
 
   grunt.registerTask('default', ['sass_import','sass', 'autoprefixer', 'cssmin']);
 
