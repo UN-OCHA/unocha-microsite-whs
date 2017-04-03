@@ -11,10 +11,16 @@
 }
 
 .site-header__logo {
-	width: $base-unit*12;
+	width: 104px;
+	height: 38px;
 	position: absolute;
 	top: 0;
 	left: 0;
+
+	svg {
+		width: 100%;
+		height: 100%;
+	}
 }
 
 .site-header__heading {
@@ -68,7 +74,8 @@
 	}
 
 	.site-header__logo {
-		width: $base-unit*20;
+		width: 174px;
+		height: 64px;
 	}	
 
 	.site-header__sub-heading {

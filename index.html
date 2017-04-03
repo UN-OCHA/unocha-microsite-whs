@@ -6,8 +6,11 @@
   <title>World Humanitarian Summit</title>
   <meta name="description" content="World Humanitarian Summit, 23-24 May 2016, Istanbul, Turkey">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -17,7 +20,10 @@
       <div class="site-header__inner">
         <a href="#main" class="skip-link">Skip to content</a>
 
-        <a href="./"><img class="site-header__logo" src="images/whs-logo.svg" alt="World Humanitarian Summit logo"></a>
+        <a href="./" class="site-header__logo">
+          <svg aria-hidden="true"><use xlink:href="icons/symbol-defs.svg#icon-whs-logo"></use></svg>
+          <span class="sr-only">World Humanitarian Summit home page</span>
+        </a>
 
         <nav role="navigation" class="nav">
           <a href="./" class="nav__link nav__link--active">Summit</a>

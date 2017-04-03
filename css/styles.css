@@ -849,6 +849,16 @@ h2.highlight-heading {
   .offset-xxl-11 {
     margin-left: 91.6666666667%; } }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
 .btn-primary {
   display: inline-block;
   color: #006e93;
@@ -1019,10 +1029,14 @@ h2.highlight-heading {
   padding-top: 48px; }
 
 .site-header__logo {
-  width: 96px;
+  width: 104px;
+  height: 38px;
   position: absolute;
   top: 0;
   left: 0; }
+  .site-header__logo svg {
+    width: 100%;
+    height: 100%; }
 
 .site-header__heading {
   font-size: 24px;
@@ -1058,7 +1072,8 @@ h2.highlight-heading {
   .site-header__inner {
     padding-top: 80px; }
   .site-header__logo {
-    width: 160px; }
+    width: 174px;
+    height: 64px; }
   .site-header__sub-heading {
     font-size: 24px;
     font-size: 1.5rem; } }
