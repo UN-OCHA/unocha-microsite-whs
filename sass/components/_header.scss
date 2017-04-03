@@ -24,6 +24,7 @@
 }
 
 .site-header__heading {
+	font-family: $heading-font;
 	@include font-size($medium-font-size);
 	font-weight: bold;
 }
