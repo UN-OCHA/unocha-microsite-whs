@@ -67,7 +67,7 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         files: {
-          'js/scripts.min.js': ['js/scripts.js', 'js/svgxuse.js']
+          'js/scripts.min.js': ['js/scripts.js', 'js/svg4everybody.js']
         }
       }
     },
