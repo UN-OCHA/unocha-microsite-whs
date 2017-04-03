@@ -80,11 +80,28 @@ module.exports = function(grunt) {
           'css/styles.min.css': ['_site/index.html', 'site/resources.html']
         }
       }
+    },
+    shell: {
+      jekyllServe: {
+        command: 'jekyll serve'
+      }
+    },
+    concurrent: {
+      serve: [
+        'sass',
+        'watch',
+        'shell:jekyllServe'
+      ],
+      options: {
+        logConcurrentOutput: true
+      }
     }
   });
 
   require('load-grunt-tasks')(grunt);
 
   grunt.registerTask('default', ['sass_import','sass', 'autoprefixer', 'uncss', 'cssmin', 'svgmin', 'uglify']);
+
+  grunt.registerTask('serve', ['concurrent:serve'])
 
 };
