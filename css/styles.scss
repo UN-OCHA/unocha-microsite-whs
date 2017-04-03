@@ -1,31 +1,22 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
-@charset "utf-8";
-
-
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-	"variables/breakpoints",
-	"variables/colours",
-	"variables/font-sizes",
-	"variables/fonts",
-	"variables/measurements",
-	"mixins/clearfix",
-	"mixins/font-size",
-	"mixins/media-queries",
-  "base/a-reset",
-  "base/base",
-  "base/grid",
-  "base/helpers",
-  "components/buttons",
-  "components/faqs",
-  "components/footer",
-  "components/header",
-  "components/main-content",
-  "components/nav",
-  "components/programme",
-  "components/resources",
-  "components/skip-link",
-  "components/themes";
+@import '../sass/variables/_breakpoints';
+@import '../sass/variables/_colours';
+@import '../sass/variables/_font-sizes';
+@import '../sass/variables/_fonts';
+@import '../sass/variables/_measurements';
+@import '../sass/mixins/_clearfix';
+@import '../sass/mixins/_font-size';
+@import '../sass/mixins/_media-queries';
+@import '../sass/base/_a-reset';
+@import '../sass/base/_base';
+@import '../sass/base/_grid';
+@import '../sass/base/_helpers';
+@import '../sass/components/_buttons';
+@import '../sass/components/_faqs';
+@import '../sass/components/_footer';
+@import '../sass/components/_header';
+@import '../sass/components/_main-content';
+@import '../sass/components/_nav';
+@import '../sass/components/_programme';
+@import '../sass/components/_resources';
+@import '../sass/components/_skip-link';
+@import '../sass/components/_themes';
