@@ -43,12 +43,23 @@
 	width: 100%;	
   padding: 0 $base-unit*2;
 
-  ol {
-  	list-style: decimal;
+  ol, ul {
+  	list-style: initial;
+  	list-style-position: inside;
+  	margin-bottom: $base-unit*3;
   }
 
   li {
   	margin-bottom: $base-unit;
+  }
+
+  a {
+  	color: $body-text-color;
+  	font-weight: bold;
+
+  	&:hover, &:focus {
+  		text-decoration: none;
+  	}
   }
 
   .js & {
@@ -148,7 +159,7 @@
 			display: block;
 			font-weight: bold;
 			text-transform: uppercase;
-			padding-bottom: $base-unit;
+			padding-bottom: $base-unit*3;
 		}
 	}
 

@@ -926,10 +926,17 @@ h2.highlight-heading {
   display: block;
   width: 100%;
   padding: 0 16px; }
-  .faqs__content ol {
-    list-style: decimal; }
+  .faqs__content ol, .faqs__content ul {
+    list-style: initial;
+    list-style-position: inside;
+    margin-bottom: 24px; }
   .faqs__content li {
     margin-bottom: 8px; }
+  .faqs__content a {
+    color: #686868;
+    font-weight: bold; }
+    .faqs__content a:hover, .faqs__content a:focus {
+      text-decoration: none; }
   .js .faqs__content {
     height: 0;
     transition: opacity 0.3s ease;
@@ -994,7 +1001,7 @@ h2.highlight-heading {
     display: block;
     font-weight: bold;
     text-transform: uppercase;
-    padding-bottom: 8px; } }
+    padding-bottom: 24px; } }
 
 .footer {
   background: #19262F;
