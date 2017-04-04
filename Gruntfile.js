@@ -21,18 +21,18 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: ['sass/**/*.scss'],
-        tasks: ['sass:dist', 'autoprefixer'],
+        tasks: ['sass'],
         options: {
           spawn: false,
         }
       },
-      // js: {
-      //   files: ['js/scripts.js'],
-      //   tasks: ['uglify'],
-      //   options: {
-      //     spawn: false,
-      //   }
-      // }
+      js: {
+        files: ['js/scripts.js'],
+        tasks: ['concat'],
+        options: {
+          spawn: false,
+        }
+      }
     },
     autoprefixer: {
       dist: {
@@ -96,7 +96,6 @@ module.exports = function(grunt) {
     concurrent: {
       serve: [
         'sass',
-        // 'uglify',
         'watch',
         'shell:jekyllServe'
       ],
@@ -116,6 +115,12 @@ module.exports = function(grunt) {
         ],
         uglify: true
       }
+    },
+    concat: {
+      serve: {
+        src: ['js/modernizr-output.js', 'js/scripts.js', 'js/svg4everybody.js'],
+        dest: 'js/scripts.min.js',
+      },
     }
   });
 

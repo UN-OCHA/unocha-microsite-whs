@@ -88,7 +88,6 @@
     }
     escapeEvent(toggleItems, togglesHolder);
   }
-
   addClass(document.body, 'js');
   initToggler(document.querySelector('[data-faqs]'));
   initToggler(document.querySelector('[data-programme]'));
