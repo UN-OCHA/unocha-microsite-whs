@@ -28,7 +28,7 @@
     }
   }
 
-  function toggletoggleItem (toggleItem, toggles, togglesHolder) {
+  function toggleIt (toggleItem, toggles, togglesHolder) {
     var index = toggleItem.className.indexOf('active');
     var parentIndex = togglesHolder.className.indexOf('open');
 
@@ -61,7 +61,7 @@
 
     if (toggleButton) {
       toggleButton.addEventListener('click', function( event ) {  
-        toggletoggleItem(event.target.parentElement, toggles, togglesHolder);
+        toggleIt(toggleItem, toggles, togglesHolder);
       });
     }
 

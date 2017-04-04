@@ -2,8 +2,11 @@
 	background: $grey-bg;
 	margin: 0 0 $base-unit 0;
 	position: relative;
+	transition: background 0.3s ease;
 
 	&.active {
+		background: $blue;
+
 		.programme__heading {
 			opacity: 0;
 		}
@@ -21,6 +24,7 @@
 }
 
 .programme__heading {
+	display: block;
 	padding: $base-unit*2;
 	cursor: pointer;
   width: 100%;
@@ -32,6 +36,11 @@
   background: none;
   border: none;
   -webkit-appearance: none;
+
+  > * {
+		max-width: 100%;
+		display: block;
+	}
 
   .js & {
   	position: absolute;
@@ -46,7 +55,6 @@
 }
 
 .programme__content {
-	background: $blue;
 	padding: $base-unit*1.5;
 	color: $light-text-color;
 	@include font-size($small-font-size);
@@ -54,13 +62,16 @@
 	position: relative;
 	min-height: $base-unit*8;
 
+	> * {
+		max-width: 100%;
+	}
+
 	.js & {
 		z-index: -1;
 		opacity: 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		flex-direction: column;
 	}
 
 	p {
@@ -86,11 +97,19 @@
 			display: flex;
 			flex-wrap: wrap;
 		}
+
+		.no-flexbox & {
+			overflow: auto;
+		}
 	}
 
 	.programme__item {
 		width: 48%;
 		margin: $base-unit 1%;
+
+		.no-flexbox & {
+			float: left;
+		}
 	}
 
 }

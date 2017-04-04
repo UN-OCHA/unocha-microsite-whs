@@ -111,11 +111,14 @@
 		.faqs__item {
 			width: percentage(1/7);
 			padding: 0;
+			border-right: 1px solid $dark-border;
 
-			&:first-child {
-				.faqs__heading {
-					border-left: 1px solid $dark-border;
-				}
+			.no-flexbox & {
+				float: left;
+			}
+
+			&:first-child, &.active {
+				border-left: 1px solid $dark-border;
 			}
 		}
 
@@ -126,13 +129,13 @@
 			&.active {
 				opacity: 1;
 				width: 100%;
-				position: static;
+				position: relative;
 				z-index: 9999;
 			}
 		}
 
 		.faqs__heading {
-			border-right: 1px solid $dark-border;
+			
 			border-bottom: none;
 			padding: $base-unit*3 $base-unit*2;
 		}
@@ -145,8 +148,6 @@
 			top: 0;
 			left: 0;
 			height: auto;
-			border-right: 1px solid $dark-border;
-	  	border-left: 1px solid $dark-border;
 			height: auto;
 	  	opacity: 0;
 		}

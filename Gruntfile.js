@@ -25,7 +25,14 @@ module.exports = function(grunt) {
         options: {
           spawn: false,
         }
-      }
+      },
+      // js: {
+      //   files: ['js/scripts.js'],
+      //   tasks: ['uglify'],
+      //   options: {
+      //     spawn: false,
+      //   }
+      // }
     },
     autoprefixer: {
       dist: {
@@ -67,7 +74,7 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         files: {
-          'js/scripts.min.js': ['js/scripts.js', 'js/svg4everybody.js']
+          'js/scripts.min.js': ['js/modernizr-output.js', 'js/scripts.js', 'js/svg4everybody.js']
         }
       }
     },
@@ -89,19 +96,33 @@ module.exports = function(grunt) {
     concurrent: {
       serve: [
         'sass',
+        // 'uglify',
         'watch',
         'shell:jekyllServe'
       ],
       options: {
         logConcurrentOutput: true
       }
+    },
+    modernizr: {
+      dist: {
+        crawl: false,
+        dest: 'js/modernizr-output.js',
+        tests: [
+          'flexbox'
+        ],
+        options: [
+          'setClasses'
+        ],
+        uglify: true
+      }
     }
   });
 
   require('load-grunt-tasks')(grunt);
+  grunt.loadNpmTasks("grunt-modernizr"); //not picked up by load-grunt-tasks
 
-  grunt.registerTask('default', ['sass_import','sass', 'autoprefixer', 'uncss', 'cssmin', 'svgmin', 'uglify']);
-
+  grunt.registerTask('default', ['sass_import','sass', 'autoprefixer', 'uncss', 'cssmin', 'svgmin', 'modernizr', 'uglify']);
   grunt.registerTask('serve', ['concurrent:serve'])
 
 };

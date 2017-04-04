@@ -49,10 +49,18 @@
 	.themes {
 		display: flex;
 		flex-wrap: wrap;
+
+		.no-flexbox & {
+			overflow: auto;
+		}
 	}
 
 	.themes__item {
 		width: 50%;
+
+		.no-flexbox & {
+			float: left;
+		}
 	}
 
 }
@@ -71,6 +79,7 @@
 		display: block;
 		text-align: center;
 		@include font-size($small-font-size);
+		min-height: 202px;
 
 		svg {
 			display: block;
