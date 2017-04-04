@@ -77,7 +77,7 @@ module.exports = function(grunt) {
           ignore: [/\.js/, /\.active/, /\.open/]
         },
         files: {
-          'css/styles.min.css': ['_site/index.html', 'site/resources.html']
+          'css/styles.min.css': ['_site/index.html', '_site/resources.html']
         }
       }
     },
