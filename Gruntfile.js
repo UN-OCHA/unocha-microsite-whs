@@ -7,27 +7,27 @@ module.exports = function(grunt) {
       options: {},
       dist: {
         files: {
-          'css/styles.scss': ['sass/variables/*.scss', 'sass/mixins/*.scss', 'sass/base/*.scss', 'sass/components/*.scss'],
+          'assets/css/styles.scss': ['assets/sass/variables/*.scss', 'assets/sass/mixins/*.scss', 'assets/sass/base/*.scss', 'assets/sass/components/*.scss'],
         }
       }
     },
     sass: {
       dist: {
         files: {
-          'css/styles.min.css': 'css/styles.scss'
+          'assets/css/styles.min.css': 'assets/css/styles.scss'
         }
       }
     },
     watch: {
       sass: {
-        files: ['sass/**/*.scss'],
+        files: ['assets/sass/**/*.scss'],
         tasks: ['sass'],
         options: {
           spawn: false,
         }
       },
       js: {
-        files: ['js/scripts.js'],
+        files: ['assets/js/scripts.js'],
         tasks: ['concat'],
         options: {
           spawn: false,
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
     autoprefixer: {
       dist: {
         files: {
-          'css/styles.min.css': 'css/styles.min.css'
+          'assets/css/styles.min.css': 'assets/css/styles.min.css'
         },
         options: {
           browsers: ['last 2 versions', 'iOS 8']
@@ -46,12 +46,9 @@ module.exports = function(grunt) {
     },
     cssmin: {
       target: {
-        files: [{
-          expand: true,
-          cwd: 'css',
-          src: ['*.css'],
-          dest: 'css'
-        }]
+        files: {
+          'assets/css/styles.min.css': 'assets/css/styles.min.css'
+        }
       }
     },
     svgmin: {
@@ -67,14 +64,14 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'icons/symbol-defs.svg' : 'icons/symbol-defs.svg'
+          'assets/icons/symbol-defs.svg' : 'assets/icons/symbol-defs.svg'
         }
       }
     },
     uglify: {
       dist: {
         files: {
-          'js/scripts.min.js': ['js/modernizr-output.js', 'js/scripts.js', 'js/svg4everybody.js']
+          'assets/js/scripts.min.js': ['assets/js/modernizr-output.js', 'assets/js/scripts.js', 'assets/js/svg4everybody.js']
         }
       }
     },
@@ -84,7 +81,7 @@ module.exports = function(grunt) {
           ignore: [/\.js/, /\.active/, /\.open/]
         },
         files: {
-          'css/styles.min.css': ['_site/index.html', '_site/resources.html']
+          'assets/css/styles.min.css': ['_site/index.html', '_site/resources.html']
         }
       }
     },
@@ -106,7 +103,7 @@ module.exports = function(grunt) {
     modernizr: {
       dist: {
         crawl: false,
-        dest: 'js/modernizr-output.js',
+        dest: 'assets/js/modernizr-output.js',
         tests: [
           'flexbox'
         ],
@@ -118,8 +115,8 @@ module.exports = function(grunt) {
     },
     concat: {
       serve: {
-        src: ['js/modernizr-output.js', 'js/scripts.js', 'js/svg4everybody.js'],
-        dest: 'js/scripts.min.js',
+        src: ['assets/js/modernizr-output.js', 'assets/js/scripts.js', 'assets/js/svg4everybody.js'],
+        dest: 'assets/js/scripts.min.js',
       },
     }
   });
