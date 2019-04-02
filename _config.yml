@@ -16,7 +16,7 @@
 title: World Humanitarian Summit
 description: > # this means to ignore newlines until "baseurl:"
   World Humanitarian Summit, 23-24 May 2016, Istanbul, Turkey
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/unocha-microsite-whs" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
